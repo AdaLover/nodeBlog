@@ -1,0 +1,12 @@
+<div class="container home__container">
+    <div class="home__blog--post">
+        <img src="./images/{{data.cover}}" style="display:block" alt="cover" width="100%" height="310px">
+        <a href="/posts/show/{{Data._id}}">{{Data.title}}</a>
+        <p class="home__blog--post--category">posted in {{Data.category}}</p>
+        <p>by {{Data.author}}</p>
+        <p>on {{#moment}}{{Data.date}}{{/moment}}</p>
+        <a class="home__blog--post--more" href="/post/show/{{Data._id}}">read more</a>
+        <div class="home__blog--post--divider"></div>
+    </div>
+    {{/each}} {{/if}}
+</div>

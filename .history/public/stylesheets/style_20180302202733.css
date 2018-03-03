@@ -1,0 +1,36 @@
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.utilHover:hover {
+  background-color: #00b7ff;
+}
+a {
+  color: #00b7ff;
+  text-decoration: none !important;
+}
+.home__container {
+  margin: 1rem;
+}
+.home__blog--post {
+  margin: 10rem;
+
+  padding: 2rem;
+}
+.home__blog--post a {
+  font-size: 1.5rem;
+}
+.home__blog--post--category {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #777;
+}
+.home__blog--post--more {
+  font-size: 0.1rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: rgb(83, 83, 83);
+}
+.home__blog--post p {
+  font-size: 1rem;
+}

@@ -1,0 +1,29 @@
+<div class="container home__container">
+    {{#if data}}
+    <div class="home__blog--post">
+        <img src="/images/{{data.cover}}" style="display:block" alt="cover" width="100%" height="310px">
+        <a href="/posts/show/{{data._id}}">{{data.title}}</a>
+        <p id="body">{{data.body}}</p>
+        <p class="home__blog--post--category">posted in {{data.category}}</p>
+        <p>by {{data.author}}</p>
+        <p>on {{data.date}}</p>
+    </div>
+    {{/if}}
+</div>
+<script src="/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+    function createTextSnippet() {
+        //example as before, replace YOUR_TEXTAREA_ID
+        var html = CKEDITOR.instances.YOUR_TEXTAREA_ID.getSnapshot();
+        var dom = document.createElement("DIV");
+        dom.innerHTML = html;
+        var plain_text = (dom.textContent || dom.innerText);
+
+        //create and set a 128 char snippet to the hidden form field
+        var snippet = plain_text.substr(0, 127);
+        document.getElementById("body").value = snippet;
+
+        //return true, ok to submit the form
+        return true;
+    } ();
+</script>

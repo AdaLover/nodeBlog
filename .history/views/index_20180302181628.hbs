@@ -1,0 +1,7 @@
+<div class="container">
+    {{#if posts}} {{#each posts}}
+    <div class="home__blog">
+        <a href="/posts/show/{{this._id}}">{{this.title}}</a>
+    </div>
+    {{/each}} {{/if}}
+</div>

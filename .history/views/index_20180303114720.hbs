@@ -1,0 +1,14 @@
+<div class="label label-success">{{success}}</div>
+<div class="container home__container">
+    {{#if posts}} {{#each posts}}
+    <div class="home__blog--post">
+        <img src="./images/{{this.cover}}" alt="">
+        <a href="/posts/show/{{this._id}}">{{this.title}}</a>
+        <p class="home__blog--post--category">posted in {{this.category}}</p>
+        <p>by {{this.author}}</p>
+        <p>on {{#moment}}{{this.date}}{{/moment}}</p>
+        <a class="home__blog--post--more" href="/posts/show/{{this._id}}">read more</a>
+        <div class="home__blog--post--divider"></div>
+    </div>
+    {{/each}} {{/if}}
+</div>

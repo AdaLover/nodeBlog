@@ -1,0 +1,12 @@
+<div class="container home__container">
+    {{#if data}}
+    <div class="home__blog--post">
+        <img src="/images/{{data.cover}}" style="display:block" alt="cover" width="100%" height="310px">
+        <a href="/posts/show/{{data._id}}">{{data.title}}</a>
+        <p id="body">{{{data.body}}}</p>
+        <p class="home__blog--post--category">posted in {{data.category}}</p>
+        <p>by {{data.author}}</p>
+        <p>on {{data.date}}</p>
+    </div>
+    {{/if}}
+</div>
